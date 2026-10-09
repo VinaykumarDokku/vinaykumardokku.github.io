@@ -1,4 +1,91 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Vinay Kumar Dokku — Software Developer portfolio. Python, FastAPI, React, Angular, AWS and Azure."><title>Vinay Kumar Dokku | Software Developer</title><link rel="stylesheet" href="style.css"></head><body>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Vinay Kumar Dokku — Software Developer portfolio. Python, FastAPI, React, Angular, AWS and Azure."><title>Vinay Kumar Dokku | Software Developer</title><link rel="stylesheet" href="style.css">
+<style>
+#intro-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: linear-gradient(
+    135deg, #071326, #142d49, #050b18
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  transition: opacity 1s, visibility 1s;
+}
+
+.intro-content {
+  padding: 20px;
+  animation: appear 1.5s ease;
+}
+
+.intro-content h1 {
+  font-size: clamp(32px, 6vw, 70px);
+  letter-spacing: 3px;
+}
+
+.intro-content p {
+  letter-spacing: 4px;
+}
+
+.loading-bar {
+  width: 200px;
+  height: 3px;
+  background: #ffffff33;
+  margin: 30px auto;
+}
+
+.loading-progress {
+  height: 100%;
+  background: #66e0ff;
+  animation: loading 3s forwards;
+}
+
+#intro-loader.hide {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes loading {
+  from { width: 0; }
+  to { width: 100%; }
+}
+</style>
+</head>
+<script>
+window.addEventListener("load", function () {
+  setTimeout(function () {
+    document.getElementById("intro-loader")
+      .classList.add("hide");
+  }, 3000);
+});
+</script>
+<body>
+<div id="intro-loader">
+  <div class="intro-content">
+    <p>WELCOME TO MY PORTFOLIO</p>
+    <h1>VINAY KUMAR DOKKU</h1>
+    <p>AI/ML ENGINEER</p>
+
+    <div class="loading-bar">
+      <div class="loading-progress"></div>
+    </div>
+  </div>
+</div>
+
 <header class="nav"><a class="brand" href="#home">VINAY KUMAR DOKKU</a><button class="menu" aria-label="Toggle menu" aria-expanded="false">☰</button><nav id="links"><a class="active" href="#home">Home</a><a href="#about">About</a><a href="#portfolio">Portfolio</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#contact">Contact</a></nav></header>
 <main><section id="home" class="hero dark"><canvas class="particles" aria-hidden="true"></canvas><div class="hero-inner"><p class="eyebrow">Full Stack Developer</p><h1><span id="typing">Software Developer</span><span class="cursor">|</span></h1><p class="hero-copy">I'm <strong>Vinay Kumar Dokku</strong>, a full-stack software developer with 6 years of experience building scalable cloud-native applications using Python, FastAPI, React, Angular, AWS and Azure. I enjoy creating intelligent solutions with AI, clean APIs and thoughtful user experiences.</p><a class="resume" href="Vinay_Kumar_Dokku_Resume.pdf" download>href="...". ↓</a></div><a href="#about" class="down" aria-label="Scroll to About">⌄</a></section>
 <section id="about" class="section"><div class="section-heading"><span class="heading-icon">♟</span><div class="heading-rule"></div><span class="ghost">ABOUT ME</span><h2>About me</h2><p>About, Skills and Education.</p></div><div class="tabs" role="tablist" aria-label="About tabs"><button class="selected" data-tab="bio" role="tab" aria-selected="true">ABOUT</button><button data-tab="skills" role="tab" aria-selected="false">SKILL</button><button data-tab="study" role="tab" aria-selected="false">EDUCATION</button></div><div class="tab-panel active" id="bio"><img class="portrait" src="profile.jpg" alt="Vinay Kumar Dokku"><h3>Vinay Kumar Dokku <span class="muted">— Full-Stack Developer · Python · Cloud · React · Angular · AI/ML</span></h3><p>Software Developer experienced in delivering production-ready applications and enterprise solutions. My work spans microservices, API development, cloud infrastructure, AI-powered document processing and modern frontend development.</p><p><strong>Tools and platforms:</strong> VS Code, Git, Docker, Kubernetes, Terraform, Jenkins, GitLab CI/CD, AWS, Azure, PostgreSQL, DynamoDB, MongoDB, FastAPI, Django, React, Angular, PyTest and Selenium.</p></div><div class="tab-panel" id="skills"><div class="skill-grid"><div><h3>Languages</h3><p>Python · Java · JavaScript · TypeScript · SQL</p></div><div><h3>Frontend</h3><p>React.js · Angular · HTML · CSS · Chakra UI</p></div><div><h3>Backend & APIs</h3><p>FastAPI · Django · Flask · Spring Boot · REST · GraphQL</p></div><div><h3>Cloud & DevOps</h3><p>AWS · Azure · Docker · Kubernetes · Terraform · CI/CD</p></div><div><h3>Data & AI</h3><p>PostgreSQL · DynamoDB · MongoDB · OpenAI API · Pandas</p></div><div><h3>Quality</h3><p>PyTest · Selenium · Postman · Integration Testing</p></div></div></div><div class="tab-panel" id="study"><div class="study-grid"><article><h3>Ph.D. in Artificial Intelligence</h3><p>University of the Cumberlands</p><small>In progress</small></article><article><h3>Master's in Information Technology</h3><p>Wilmington University</p><small>2023</small></article></div></div></section>
