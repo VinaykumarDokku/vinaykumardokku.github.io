@@ -64,6 +64,81 @@
   to { width: 100%; }
 }
 </style>
+
+<style>
+.portfolio-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+  max-width: 1150px;
+  margin: 45px auto;
+}
+
+.portfolio-card {
+  display: block;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #fff;
+  color: #222;
+  text-decoration: none;
+  box-shadow: 0 8px 28px rgba(0,0,0,.12);
+  transition: transform .35s, box-shadow .35s;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 18px 40px rgba(0,0,0,.22);
+}
+
+.portfolio-art {
+  height: 190px;
+  background: linear-gradient(135deg,#121b30,#31577a);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 35px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  transition: transform .4s;
+}
+
+.portfolio-card:hover .portfolio-art {
+  transform: scale(1.04);
+}
+
+.portfolio-info {
+  padding: 24px;
+}
+
+.portfolio-info h3 {
+  margin: 0 0 12px;
+  font-size: 20px;
+}
+
+.portfolio-info p {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.portfolio-info span {
+  color: #d96b30;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .portfolio-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .portfolio-cards {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
 </head>
 <script>
 window.addEventListener("load", function () {
@@ -91,7 +166,80 @@ window.addEventListener("load", function () {
   DOWNLOAD RESUME ↓</a></div><a href="#about" class="down" aria-label="Scroll to About">⌄</a></section>
 <section id="about" class="section"><div class="section-heading"><span class="heading-icon">♟</span><div class="heading-rule"></div><span class="ghost">ABOUT ME</span><h2>About me</h2><p>About, Skills and Education.</p></div><div class="tabs" role="tablist" aria-label="About tabs"><button class="selected" data-tab="bio" role="tab" aria-selected="true">ABOUT</button><button data-tab="skills" role="tab" aria-selected="false">SKILL</button><button data-tab="study" role="tab" aria-selected="false">EDUCATION</button></div><div class="tab-panel active" id="bio"><img class="portrait" src="profile.jpg" alt="Vinay Kumar Dokku"><h3>Vinay Kumar Dokku <span class="muted">— Full-Stack Developer · Python · Cloud · React · Angular · AI/ML</span></h3><p>Software Developer experienced in delivering production-ready applications and enterprise solutions. My work spans microservices, API development, cloud infrastructure, AI-powered document processing and modern frontend development.</p><p><strong>Tools and platforms:</strong> VS Code, Git, Docker, Kubernetes, Terraform, Jenkins, GitLab CI/CD, AWS, Azure, PostgreSQL, DynamoDB, MongoDB, FastAPI, Django, React, Angular, PyTest and Selenium.</p></div><div class="tab-panel" id="skills"><div class="skill-grid"><div><h3>Languages</h3><p>Python · Java · JavaScript · TypeScript · SQL</p></div><div><h3>Frontend</h3><p>React.js · Angular · HTML · CSS · Chakra UI</p></div><div><h3>Backend & APIs</h3><p>FastAPI · Django · Flask · Spring Boot · REST · GraphQL</p></div><div><h3>Cloud & DevOps</h3><p>AWS · Azure · Docker · Kubernetes · Terraform · CI/CD</p></div><div><h3>Data & AI</h3><p>PostgreSQL · DynamoDB · MongoDB · OpenAI API · Pandas</p></div><div><h3>Quality</h3><p>PyTest · Selenium · Postman · Integration Testing</p></div></div></div><div class="tab-panel" id="study"><div class="study-grid"><article><h3>Ph.D. in Artificial Intelligence</h3><p>University of the Cumberlands</p><small>In progress</small></article><article><h3>Master's in Information Technology</h3><p>Wilmington University</p><small>2023</small></article></div></div></section>
 <section class="quote dark"><p>“Great software is built by turning complex problems into simple, reliable experiences.”</p><span>— My development philosophy</span></section>
-<section id="portfolio" class="section"><div class="section-heading"><span class="heading-icon">▣</span><div class="heading-rule"></div><span class="ghost">MY PORTFOLIO</span><h2>My Portfolio</h2><p>Some of my projects and work.</p></div><div class="project-grid"><a class="project" href="https://github.com/VinaykumarDokku/AI-Resume-Screening-System" target="_blank" rel="noopener"><div class="project-art art1"><span>AI</span><div class="art-lines"></div></div><h3>AI Resume Screening System</h3><p>Python · Streamlit · NLP · TF-IDF</p><span class="view">View on GitHub ↗</span></a><a class="project" href="https://github.com/VinaykumarDokku/mcp_server" target="_blank" rel="noopener"><div class="project-art art2"><span>{ API }</span><div class="art-lines"></div></div><h3>MCP Server</h3><p>JavaScript · Developer Tools</p><span class="view">View on GitHub ↗</span></a><a class="project" href="https://github.com/VinaykumarDokku/minesweeper" target="_blank" rel="noopener"><div class="project-art art3"><span>✦ ▦ ✦</span><div class="art-lines"></div></div><h3>Minesweeper Game</h3><p>Java · Game Logic</p><span class="view">View on GitHub ↗</span></a><article class="project"><div class="project-art art4"><span>PACE</span></div><h3>Contract Intelligence Platform</h3><p>Python · FastAPI · Angular · Azure</p><span class="view muted">Professional experience</span></article><article class="project"><div class="project-art art5"><span>PDF → AI</span></div><h3>Clinical AI Document Extraction</h3><p>React · FastAPI · AWS · LLMs</p><span class="view muted">Professional experience</span></article><article class="project"><div class="project-art art6"><span>☁</span></div><h3>Cloud-Native Microservices</h3><p>Django · FastAPI · AWS · Docker</p><span class="view muted">Professional experience</span></article></div></section>
+<section id="portfolio" class="section portfolio-new">
+  <div class="section-heading">
+    <span class="heading-icon">▣</span>
+    <div class="heading-rule"></div>
+    <span class="ghost">MY PORTFOLIO</span>
+    <h2>My Portfolio</h2>
+    <p>Explore my projects and technical work.</p>
+  </div>
+
+  <div class="portfolio-cards">
+
+    <a class="portfolio-card"
+       href="https://github.com/VinaykumarDokku/AI-Resume-Screening-System"
+       target="_blank" rel="noopener">
+      <div class="portfolio-art">AI</div>
+      <div class="portfolio-info">
+        <h3>AI Resume Screening System</h3>
+        <p>Python · Streamlit · NLP · TF-IDF</p>
+        <span>View Project ↗</span>
+      </div>
+    </a>
+
+    <a class="portfolio-card"
+       href="https://github.com/VinaykumarDokku/mcp_server"
+       target="_blank" rel="noopener">
+      <div class="portfolio-art">API</div>
+      <div class="portfolio-info">
+        <h3>MCP Server</h3>
+        <p>JavaScript · Developer Tools</p>
+        <span>View Project ↗</span>
+      </div>
+    </a>
+
+    <a class="portfolio-card"
+       href="https://github.com/VinaykumarDokku/minesweeper"
+       target="_blank" rel="noopener">
+      <div class="portfolio-art">GAME</div>
+      <div class="portfolio-info">
+        <h3>Minesweeper Game</h3>
+        <p>Java · Game Logic</p>
+        <span>View Project ↗</span>
+      </div>
+    </a>
+
+    <article class="portfolio-card">
+      <div class="portfolio-art">PACE</div>
+      <div class="portfolio-info">
+        <h3>Contract Intelligence Platform</h3>
+        <p>Python · FastAPI · Angular · Azure</p>
+        <span>Professional Experience</span>
+      </div>
+    </article>
+
+    <article class="portfolio-card">
+      <div class="portfolio-art">PDF → AI</div>
+      <div class="portfolio-info">
+        <h3>Clinical AI Document Extraction</h3>
+        <p>React · FastAPI · AWS · LLMs</p>
+        <span>Professional Experience</span>
+      </div>
+    </article>
+
+    <article class="portfolio-card">
+      <div class="portfolio-art">CLOUD</div>
+      <div class="portfolio-info">
+        <h3>Cloud-Native Microservices</h3>
+        <p>Django · FastAPI · AWS · Docker</p>
+        <span>Professional Experience</span>
+      </div>
+    </article>
+
+  </div>
+</section>
+
 <section id="experience" class="section experience"><div class="section-heading"><span class="heading-icon">∞</span><div class="heading-rule"></div><span class="ghost">MY EXPERIENCE</span><h2>My Experience</h2><p>Professional work profile.</p></div><div class="experience-grid"><article class="job"><h3>Bank of America</h3><p>Software Developer</p><span>Feb 2025 – Present</span><p class="job-detail">Built APIs, microservices and data workflows for credit-risk exposure management using FastAPI, Django, PostgreSQL, AWS and Angular.</p></article><article class="job featured"><h3>What I Build</h3><p class="job-detail">Scalable APIs and cloud-native services, modern web experiences, AI-enabled document workflows, automated tests and secure CI/CD delivery.</p><div class="tech-pill">Python · React · FastAPI · AWS</div></article><article class="job"><h3>Boston Scientific</h3><p>Software Developer</p><span>Aug 2023 – Feb 2025</span><p class="job-detail">Developed AI-powered contract intelligence and clinical document extraction solutions using Python, Angular, React, Azure and AWS.</p></article><article class="job"><h3>ScriptBees</h3><p>Software Developer</p><span>Jan 2020 – Jun 2022</span><p class="job-detail">Created a sales training portal with React, REST APIs, secure authentication and cloud deployment.</p></article></div></section>
 <section id="education" class="section"><div class="section-heading"><span class="heading-icon">🏆</span><div class="heading-rule"></div><span class="ghost">MY EDUCATION</span><h2>My Education</h2><p>Educational background.</p></div><div class="education-grid"><article class="edu-card"><div class="edu-symbol">AI</div><h3>Ph.D. in Artificial Intelligence</h3><p>University of the Cumberlands</p><span>In progress</span></article><article class="edu-card"><div class="edu-symbol">IT</div><h3>Master's in Information Technology</h3><p>Wilmington University</p><span>2023 · GPA 3.60</span></article></div></section>
 <section id="contact" class="section contact dark"><canvas class="particles" aria-hidden="true"></canvas><div class="section-heading"><span class="heading-icon">♧</span><div class="heading-rule"></div><span class="ghost">CONTACT ME</span><h2>Contact me</h2><p>Let's connect and build something meaningful.</p></div><div class="contact-grid"><div><span class="contact-icon">⌖</span><p>United States of America</p></div><div><span class="contact-icon">⌘</span><p><a href="https://github.com/VinaykumarDokku" target="_blank" rel="noopener">GitHub: VinaykumarDokku</a></p></div><div><span class="contact-icon">✉</span><p><a href="mailto:dokkuvinaykumar54@gmail.com">dokkuvinaykumar54@gmail.com</a></p></div></div></section></main><footer><div class="social"><a href="https://github.com/VinaykumarDokku" target="_blank" rel="noopener" aria-label="GitHub">GH</a><a href="mailto:dokkuvinaykumar54@gmail.com" aria-label="Email">✉</a><a href="Vinay_Kumar_Dokku_Resume.pdf" aria-label="Resume" target="_blank">CV</a></div><p>Designed with <span class="heart">♥</span> by Vinay Kumar Dokku</p></footer><script src="script.js"></script></body></html>
