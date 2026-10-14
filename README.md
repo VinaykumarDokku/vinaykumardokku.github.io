@@ -1,16 +1,15 @@
-# Vinay Kumar Dokku — Portfolio
+# Vinay Kumar Dokku — Portfolio Website
 
-A responsive personal portfolio inspired by the overall visual layout of a friend's portfolio, independently implemented in HTML, CSS and JavaScript.
+Sreeja-inspired portfolio design with six GitHub project links:
 
-## Deploy on GitHub Pages
+1. AI-Resume-Screening-System (Python)
+2. Stock-Price-Prediction (Jupyter Notebook)
+3. minesweeper (Java)
+4. react-trello (JavaScript)
+5. webapp-form-builder-custom (TypeScript)
+6. video-processing (TypeScript)
 
-Upload **all** the files and the `assets/` folder into the root of `VinaykumarDokku/vinaykumardokku.github.io`. In Settings → Pages choose `Deploy from a branch`, `main`, `/ (root)`.
+The project images are **illustrative mockups** inspired by each project category, not verified screenshots of deployed software. University logo images are AI-generated approximations, not verified official brand assets.
 
-Website: https://vinaykumardokku.github.io/
-
-## Notes
-
-- The profile photo and resume are in `assets/`.
-- Project cards link to Vinay's GitHub repositories. Professional-work cards are descriptive, not links to proprietary code.
-- The portfolio is responsive and includes animated particle lines and rotating headline text.
-- Update the resume and professional details whenever needed.
+## Publish
+Upload all the website files (not the enclosing folder) to the root of your existing GitHub Pages repository, commit, and refresh the page. Keep index.html, style.css, script.js, the six project images, education images, profile.jpg, and the resume PDF together.
