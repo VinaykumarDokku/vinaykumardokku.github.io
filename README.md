@@ -1,15 +1,12 @@
-# Vinay Kumar Dokku — Portfolio Website
+VINAY KUMAR DOKKU - PORTFOLIO
 
-Sreeja-inspired portfolio design with six GitHub project links:
+This complete website includes BOTH requested Sreeja-inspired designs:
+- Education: three navy university cards and alternating dotted timeline in About > Education
+- Contact: dark network background, location, phone, email
+- Skills: orange progress bars
+- Portfolio: six GitHub projects
+- Experience: includes ScriptBees, not PwC
 
-1. AI-Resume-Screening-System (Python)
-2. Stock-Price-Prediction (Jupyter Notebook)
-3. minesweeper (Java)
-4. react-trello (JavaScript)
-5. webapp-form-builder-custom (TypeScript)
-6. video-processing (TypeScript)
+Deploy: Extract all files. Upload every file to the root of your existing GitHub Pages repository, replacing files with matching names. Commit changes. Hard refresh after GitHub Pages finishes publishing.
 
-The project images are **illustrative mockups** inspired by each project category, not verified screenshots of deployed software. University logo images are AI-generated approximations, not verified official brand assets.
-
-## Publish
-Upload all the website files (not the enclosing folder) to the root of your existing GitHub Pages repository, commit, and refresh the page. Keep index.html, style.css, script.js, the six project images, education images, profile.jpg, and the resume PDF together.
+Note: university emblems and project screenshots are illustrative, not official/actual screenshots.

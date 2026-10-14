@@ -102,3 +102,21 @@
 .timeline-image{width:190px;height:125px;max-width:100%;object-fit:contain;background:white;padding:7px;border-radius:12px;border:1px solid #e3e7eb}
 .timeline-card{overflow:hidden}
 @media(max-width:620px){.timeline-image{width:165px;height:110px}}
+
+/* Sreeja-inspired contact layout: three columns, centered text, particle canvas */
+#contact.contact{min-height:550px;padding:55px 6% 95px;background:#242934;position:relative;isolation:isolate;overflow:hidden}
+#contact .particles{z-index:0;opacity:.8}
+#contact .contact-inner{position:relative;z-index:2;max-width:1330px;margin:0 auto}
+#contact .section-heading{margin-bottom:45px;min-height:205px}
+#contact .ghost{color:rgba(255,255,255,.15)}
+#contact .section-heading h2{color:#fff}
+#contact .section-heading p{color:#aab0ba}
+#contact .contact-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:25px;max-width:1160px;margin:0 auto;text-align:center}
+#contact .contact-item{min-width:0;padding:0 10px}
+#contact .contact-icon{display:block;color:#ff9900;font-size:37px;line-height:1.2;margin-bottom:20px}
+#contact .contact-item p{color:white;font-size:18px;line-height:1.65;margin:0;overflow-wrap:anywhere}
+#contact .contact-item a{color:white}
+#contact .contact-item a:hover{color:#ff9900}
+footer .social{display:flex;justify-content:center;gap:28px;flex-wrap:wrap;padding:65px 20px}
+footer .social a{background:#fff;color:#242934;box-shadow:0 8px 24px #18293d2c}
+@media(max-width:700px){#contact.contact{padding:65px 20px 85px}#contact .section-heading{margin-bottom:32px}#contact .contact-grid{grid-template-columns:1fr;gap:33px}#contact .contact-icon{margin-bottom:8px}#contact .contact-item p{font-size:17px}}
