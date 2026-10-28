@@ -1,12 +1,20 @@
-VINAY KUMAR DOKKU - PORTFOLIO
+# Vinay Kumar Dokku — Developer Portfolio
 
-This complete website includes BOTH requested Sreeja-inspired designs:
-- Education: three navy university cards and alternating dotted timeline in About > Education
-- Contact: dark network background, location, phone, email
-- Skills: orange progress bars
-- Portfolio: six GitHub projects
-- Experience: includes ScriptBees, not PwC
+Personal portfolio website created and maintained by Vinay Kumar Dokku.
 
-Deploy: Extract all files. Upload every file to the root of your existing GitHub Pages repository, replacing files with matching names. Commit changes. Hard refresh after GitHub Pages finishes publishing.
+## Features
 
-Note: university emblems and project screenshots are illustrative, not official/actual screenshots.
+- Home page with an original animated “ideas → build → ship” creative background
+- About section, skills progress bars, and education timeline
+- Education cards for University of the Cumberlands, Wilmington University, and CMR College of Engineering & Technology
+- Six project previews linking to GitHub repositories
+- Experience section: Bank of America, Delta Dental, and DXC Technology (Hyderabad, India)
+- Contact information and downloadable résumé
+
+## Publish with GitHub Pages
+
+Extract this ZIP and upload **all** files into the root of your GitHub Pages repository. Commit the changes, wait for the deployment, and hard-refresh your browser.
+
+## Content review
+
+Dates and project responsibilities for Delta Dental and DXC Technology are placeholders pending confirmation. Verify all employment claims and dates before publishing. University emblems and project preview images are illustrative artwork, not verified official logos or live application screenshots.
