@@ -18,3 +18,7 @@ Extract this ZIP and upload **all** files into the root of your GitHub Pages rep
 ## Content review
 
 Dates and project responsibilities for Delta Dental and DXC Technology are placeholders pending confirmation. Verify all employment claims and dates before publishing. University emblems and project preview images are illustrative artwork, not verified official logos or live application screenshots.
+
+
+## Experience cards
+The Experience section has interactive cards for Bank of America, Delta Dental and DXC Technology. Hover to preview; click or tap to view a dialog with role, responsibilities and technology. Unverified Delta Dental and DXC details are explicitly marked for confirmation.

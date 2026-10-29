@@ -154,3 +154,30 @@ footer .social a{background:#fff;color:#242934;box-shadow:0 8px 24px #18293d2c}
 @keyframes orbit{to{transform:rotate(360deg)}}@keyframes floatIdea{50%{transform:translateY(-18px)}}@keyframes ideaPulse{to{transform:scale(1.2);opacity:.5}}
 @media(max-width:750px){.creative-universe{opacity:.35}.creative-ring{right:-15%;width:65vw}.creative-node{font-size:9px;padding:8px}.creative-node.idea-three{right:45%}}
 @media(prefers-reduced-motion:reduce){.creative-ring,.creative-node,.creative-universe::before{animation:none}}
+
+/* Interactive experience cards – portfolio-style previews */
+.experience-interactive{background:#f7f8fa}
+.experience-card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;max-width:1280px;margin:0 auto}
+.experience-card{font:inherit;text-align:left;cursor:pointer;display:block;width:100%;height:320px;position:relative;overflow:hidden;border:0;border-radius:7px;padding:0;color:white;background:#182a42;box-shadow:0 12px 32px #13243a18;isolation:isolate;transition:transform .3s ease,box-shadow .3s ease}
+.experience-card:hover,.experience-card:focus-visible{transform:translateY(-6px);box-shadow:0 20px 45px #13243a38;outline-offset:4px}
+.experience-card-2{background:#153c50}.experience-card-3{background:#302d55}
+.exp-card-art{position:absolute;inset:0;display:grid;place-items:center;background:radial-gradient(circle at 70% 25%,#5475a677,transparent 43%),linear-gradient(135deg,#142137,#243d62);transition:transform .4s ease}
+.experience-card-2 .exp-card-art{background:radial-gradient(circle at 70% 25%,#5bb2bb77,transparent 43%),linear-gradient(135deg,#102a3b,#216072)}
+.experience-card-3 .exp-card-art{background:radial-gradient(circle at 70% 25%,#a287e077,transparent 43%),linear-gradient(135deg,#202443,#494272)}
+.experience-card:hover .exp-card-art,.experience-card:focus-visible .exp-card-art{transform:scale(1.07)}
+.exp-monogram{font-size:clamp(65px,8vw,118px);font-weight:900;letter-spacing:-.08em;color:#ffffff20;line-height:1}
+.exp-art-line{position:absolute;width:210px;height:210px;border:1px solid #ffffff29;border-radius:50%;right:-45px;top:-65px}.exp-art-line-2{width:300px;height:300px;right:-100px;top:-100px}
+.exp-card-caption{position:absolute;bottom:0;left:0;right:0;display:flex;flex-direction:column;gap:6px;padding:25px;background:linear-gradient(transparent,#111a2bea);transition:opacity .25s ease}
+.exp-card-caption strong{font-size:23px}.exp-card-caption span{font-size:14px;color:#e5e9ef}
+.exp-card-overlay{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:28px;background:#1a2232ed;opacity:0;transition:opacity .3s ease;gap:12px}
+.experience-card:hover .exp-card-overlay,.experience-card:focus-visible .exp-card-overlay{opacity:1}
+.experience-card:hover .exp-card-caption,.experience-card:focus-visible .exp-card-caption{opacity:0}
+.exp-card-kicker{font-size:11px;color:#ffb13b;letter-spacing:3px;font-weight:800}.exp-card-overlay strong{font-size:24px}.exp-card-overlay>span:nth-child(3){font-size:14px;color:#d8deea}.exp-card-more{font-size:12px;color:#ffb13b;font-weight:800;letter-spacing:1px;margin-top:14px}
+.experience-dialog{border:0;border-radius:14px;padding:0;max-width:min(680px,calc(100vw - 32px));width:100%;max-height:min(85vh,850px);overflow:auto;color:#242934;box-shadow:0 24px 80px #0006}
+.experience-dialog::backdrop{background:#0b1423bd;backdrop-filter:blur(5px)}
+.exp-dialog-inner{padding:clamp(26px,5vw,48px);position:relative}.exp-close{position:absolute;right:20px;top:16px;background:#f0f2f5;border:0;border-radius:50%;width:38px;height:38px;font-size:27px;cursor:pointer;color:#263141}
+.exp-dialog-eyebrow{color:#f18b17;font-size:12px;font-weight:800;letter-spacing:2px;margin:0 0 12px}.exp-dialog h3{font-size:clamp(26px,4vw,38px);margin:0 0 5px}.exp-dialog-role{font-size:18px;font-weight:700;margin:0 0 6px}.exp-dialog-dates{font-size:14px;color:#737b88;margin:0 0 24px}
+.exp-dialog-section{border-top:1px solid #e8e9ed;padding-top:18px;margin-top:18px}.exp-dialog-section h4{font-size:16px;margin:0 0 10px}.exp-dialog-section p,.exp-dialog-section li{line-height:1.7;color:#48505e;font-size:15px}.exp-dialog-section ul{padding-left:20px;margin:0}
+@media(max-width:850px){.experience-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.experience-card-grid{grid-template-columns:1fr}.experience-card{height:265px}.exp-card-overlay{opacity:1;background:linear-gradient(#18223355,#182233df)}.exp-card-caption{display:none}}
+@media(hover:none){.exp-card-overlay{opacity:1;background:linear-gradient(#18223355,#182233df)}.exp-card-caption{display:none}}

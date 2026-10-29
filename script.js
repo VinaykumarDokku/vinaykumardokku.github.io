@@ -30,3 +30,15 @@ function particles(canvas){const ctx=canvas.getContext('2d');let w,h,pts=[];cons
   dialog.querySelector('.project-dialog-close').addEventListener('click', () => dialog.close());
   dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
 })();
+
+// Accessible experience-card detail dialogs
+for (const trigger of document.querySelectorAll('[data-experience-open]')) {
+  trigger.addEventListener('click', () => {
+    const dialog = document.getElementById(trigger.dataset.experienceOpen);
+    if (dialog && typeof dialog.showModal === 'function') dialog.showModal();
+  });
+}
+for (const dialog of document.querySelectorAll('.experience-dialog')) {
+  dialog.querySelector('[data-experience-close]')?.addEventListener('click', () => dialog.close());
+  dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
+}
