@@ -390,3 +390,38 @@ body:has(#home.reference-home) .nav:hover{background:rgba(24,27,35,.80)!importan
 .philosophy-rotator span{color:#f6f7f9!important;font-size:clamp(18px,2.4vw,29px);font-style:italic;font-weight:700;margin-top:24px;transition:opacity .45s ease}
 .philosophy-rotator.is-changing p,.philosophy-rotator.is-changing span{opacity:0}
 @media(max-width:700px){.philosophy-rotator{min-height:360px;padding:75px 18px!important}#portfolio.portfolio-new,#experience.experience-interactive,#contact.contact{background-position:center!important}}
+
+/* Reference-inspired page rhythm and layouts: clean white About, Experience, Education; photographic Home and Contact. */
+#home.reference-home{background:linear-gradient(rgba(15,18,25,.46),rgba(15,18,25,.58)),url("hero-background.jpg") center/cover no-repeat!important}
+#home.reference-home .reference-hero-inner{padding-top:100px!important}
+#about{padding-top:48px!important;padding-bottom:55px!important;background:#fff!important}
+#about .section-heading{margin-bottom:26px!important;padding-top:0!important}
+#about .section-heading .heading-icon{margin-bottom:6px!important}
+#about .tabs{margin-top:12px!important;margin-bottom:22px!important}
+#about #bio{padding-top:4px!important}
+#about #bio .portrait{width:175px!important;height:175px!important;margin:12px auto 20px!important}
+#about #bio h3{font-size:clamp(22px,2.6vw,35px)!important;line-height:1.45!important;margin:16px auto!important;max-width:1320px!important;text-align:center}
+#about #bio p{font-size:clamp(17px,1.6vw,23px)!important;line-height:1.7!important;max-width:1380px!important;text-align:center;margin:20px auto!important;color:#555!important}
+#portfolio.portfolio-new{background:#fff!important;color:#242934!important}
+#portfolio.portfolio-new::before{display:none!important}
+#portfolio.portfolio-new .particles{display:none!important}
+#portfolio.portfolio-new .section-heading h2{color:#242934!important}
+#portfolio.portfolio-new .section-heading p{color:#666!important}
+#portfolio.portfolio-new .section-heading .ghost{color:#d4d4d4!important}
+#portfolio .portfolio-cards{gap:22px!important}
+#portfolio .portfolio-card{border-radius:7px!important;box-shadow:0 6px 18px rgba(10,15,25,.12)!important;overflow:hidden!important}
+#portfolio .portfolio-overlay{background:rgba(35,40,51,.96)!important;color:white!important}
+#experience.experience-interactive{background:#fff!important;color:#242934!important}
+#experience.experience-interactive::before{display:none!important}
+#experience.experience-interactive .particles{display:none!important}
+#experience .section-heading h2{color:#242934!important}
+#experience .section-heading p{color:#666!important}
+#experience .section-heading .ghost{color:#d4d4d4!important}
+#experience .experience-flip{border:1.5px solid #ff9800!important;border-radius:6px!important;box-shadow:0 8px 22px rgba(0,0,0,.05)!important}
+#education{background:#fff!important}
+#education .sreeja-edu-card{background:#fff!important;color:#242934!important;border:1.5px solid #ff9800!important;border-radius:7px!important;min-height:300px!important;box-shadow:0 8px 22px rgba(0,0,0,.06)!important}
+#education .sreeja-edu-card h3{color:#242934!important}
+#education .sreeja-edu-card .edu-year{color:#777!important}
+#education .sreeja-edu-card img{height:115px!important}
+#contact.contact{background:linear-gradient(rgba(21,26,35,.85),rgba(21,26,35,.89)),url("hero-background.jpg") center/cover no-repeat!important}
+@media(max-width:720px){#about{padding-top:38px!important}#about #bio .portrait{width:140px!important;height:140px!important}#portfolio .portfolio-cards{gap:14px!important}}
