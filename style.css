@@ -210,3 +210,29 @@ footer .social a.social-circle svg{width:27px;height:27px;flex:none}
 footer .social .social-label{position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%);font-size:12px;font-weight:600;white-space:nowrap;opacity:.7}
 footer>p{font-size:15px}
 @media(max-width:520px){footer .social{gap:19px;padding:54px 12px 64px}footer .social a.social-circle{width:56px;height:56px;min-height:56px}}
+
+/* White-to-orange experience cards: content flips INSIDE the same card. */
+#experience.experience-interactive{background:linear-gradient(180deg,#303338 0%,#44474a 100%);color:#fff}
+#experience .section-heading h2{color:#fff}
+#experience .section-heading p{color:#d4d4d4}
+#experience .section-heading .ghost{color:#ffffff12}
+.experience-flip-grid{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px}
+.experience-flip{appearance:none;position:relative;display:block;width:100%;height:390px;background:#fff;border:1px solid #eee;border-radius:6px;color:#252b35;text-align:center;font:inherit;cursor:pointer;overflow:hidden;transition:border-color .22s,box-shadow .22s}
+.experience-flip:hover,.experience-flip:focus-visible,.experience-flip[aria-pressed="true"]{border-color:#ff9900;box-shadow:0 12px 32px #0002;outline-offset:3px}
+.flip-front,.flip-back{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px 25px;transition:opacity .23s,transform .25s}
+.flip-front{opacity:1;transform:scale(1)}
+.flip-company{font-size:25px;font-weight:800;margin-bottom:24px}
+.flip-role,.flip-dates{font-size:19px;line-height:1.8;color:#62676d}
+.flip-hint{position:absolute;bottom:20px;font-size:12px;color:#8b8f95}
+.flip-back{background:#ff9900;color:#fff;opacity:0;transform:scale(.97);pointer-events:none;justify-content:center;text-align:left;padding:24px 27px}
+.flip-project{display:block;font-size:18px;line-height:1.3;text-align:center;margin-bottom:12px}
+.flip-back ul{margin:0;padding-left:19px;font-size:14px;line-height:1.55;max-height:295px;overflow:auto}
+.flip-back li{margin:0 0 7px}
+.experience-flip:hover .flip-front,.experience-flip:focus-visible .flip-front,.experience-flip[aria-pressed="true"] .flip-front{opacity:0;transform:scale(1.03)}
+.experience-flip:hover .flip-back,.experience-flip:focus-visible .flip-back,.experience-flip[aria-pressed="true"] .flip-back{opacity:1;transform:scale(1);pointer-events:auto}
+/* Four icons only, exactly 2 by 2, centered on white below Contact. */
+footer .social{display:grid!important;grid-template-columns:repeat(2,66px);gap:32px 36px!important;justify-content:center!important;justify-items:center;align-items:center;padding:75px 20px 80px!important;background:#fff}
+footer .social a.social-circle{width:66px;height:66px;min-height:66px;padding:0;border-radius:50%;color:#111;background:#fff;box-shadow:0 8px 24px #18293d2c}
+@media(max-width:900px){.experience-flip-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}}
+@media(max-width:640px){.experience-flip-grid{grid-template-columns:1fr;max-width:430px}.experience-flip{height:370px}.flip-back ul{font-size:13.5px}footer .social{grid-template-columns:repeat(2,60px);gap:26px 30px!important}footer .social a.social-circle{width:60px;height:60px;min-height:60px}}
+@media(hover:none){.flip-hint{font-weight:600;color:#c47a00}}

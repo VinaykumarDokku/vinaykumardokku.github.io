@@ -1,16 +1,14 @@
-# Vinay Kumar Dokku — Personal Portfolio
+# Vinay Kumar Dokku — Developer Portfolio
 
-Personal software developer portfolio featuring projects, professional experience, education, skills and contact details.
+Personal portfolio showcasing software development experience, education, selected GitHub projects, and contact information.
 
-## Features
-- Interactive experience cards for Bank of America, Delta Dental and DXC Technology, with project details drawn from my resume
-- Six GitHub project cards
-- Education cards and timeline
-- Creative animated home section
-- Contact details with circular GitHub, LinkedIn, CV download and email icons
-- Downloadable resume
+## Experience
+Three interactive company cards: Bank of America, Delta Dental, and DXC Technology. Hover or select a card to view a summary of projects and responsibilities within the card.
 
-## Deployment
-Upload all extracted files to the root of the GitHub Pages repository and deploy from `main` / `(root)`.
+## Contact
+GitHub, LinkedIn, CV, and email icons link to the respective destinations. The CV is the resume supplied for this portfolio.
 
-Project preview imagery and university graphics are illustrative.
+## Publish on GitHub Pages
+Upload the extracted files (including index.html, style.css, script.js, images and PDF) to the root of the GitHub Pages repository. Publish from main / (root).
+
+Project images and university emblems are illustrative assets rather than official application screenshots or university branding.

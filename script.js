@@ -54,3 +54,13 @@ for (const close of document.querySelectorAll('[data-close-experience]')) {
     if (trigger) { trigger.setAttribute('aria-expanded','false'); trigger.focus(); }
   });
 }
+
+// Click/tap flips a company card in place; hover also previews its back.
+document.querySelectorAll('.experience-flip').forEach(card=>{
+ card.addEventListener('click',()=>{
+  const wasOpen=card.getAttribute('aria-pressed')==='true';
+  document.querySelectorAll('.experience-flip').forEach(other=>other.setAttribute('aria-pressed','false'));
+  card.setAttribute('aria-pressed',String(!wasOpen));
+ });
+ card.addEventListener('keydown',e=>{if(e.key==='Escape'){card.setAttribute('aria-pressed','false');card.blur();}});
+});
