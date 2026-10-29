@@ -201,3 +201,12 @@ footer .social a{background:#fff;color:#242934;box-shadow:0 8px 24px #18293d2c}
 footer .social a{display:flex;gap:8px;width:auto;height:auto;min-height:52px;padding:12px 17px;border-radius:30px;font-size:14px}
 footer .social a:hover{color:#e48a00}
 @media(max-width:650px){.contact-social-links{gap:10px}.contact-social-links a{padding:10px 13px;font-size:13px}.experience-expanded-inner{padding:20px}}
+
+/* Contact social icons: white footer strip, circular icons matching reference */
+footer .social{display:flex;justify-content:center;align-items:center;gap:26px;flex-wrap:wrap;padding:60px 20px 64px;background:#fff}
+footer .social a.social-circle{width:66px;height:66px;min-height:66px;padding:0;border-radius:50%;background:#fff;color:#252b35;box-shadow:0 7px 24px rgba(24,41,61,.16);display:flex;align-items:center;justify-content:center;position:relative;transition:transform .2s,box-shadow .2s,color .2s}
+footer .social a.social-circle:hover,footer .social a.social-circle:focus-visible{transform:translateY(-5px);color:#ee9200;box-shadow:0 12px 26px rgba(24,41,61,.23);outline:2px solid #ff9900;outline-offset:3px}
+footer .social a.social-circle svg{width:27px;height:27px;flex:none}
+footer .social .social-label{position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%);font-size:12px;font-weight:600;white-space:nowrap;opacity:.7}
+footer>p{font-size:15px}
+@media(max-width:520px){footer .social{gap:19px;padding:54px 12px 64px}footer .social a.social-circle{width:56px;height:56px;min-height:56px}}
