@@ -311,3 +311,18 @@ footer .social-circle{box-shadow:0 12px 25px #1b2b4530;transition:transform .25s
 footer .social-circle:hover{transform:translateY(-5px);box-shadow:0 16px 32px #ff980030}
 @media(max-width:700px){.hero.dark{min-height:750px}.hero-orbit{width:90px;height:90px;right:2%;top:12%;opacity:.5}.hero-overline{letter-spacing:.08em}.jayant-hero-title strong{font-size:clamp(35px,10vw,55px)}.jayant-hero-title .hero-type{font-size:clamp(20px,6vw,30px)}.hero-copy{font-size:16px!important}.portfolio-card:hover{transform:none}}
 @media(prefers-reduced-motion:reduce){.hero-orbit{animation:none}}
+
+
+/* Home-page typography adjustment only: closer to the supplied reference */
+@media (min-width: 801px) {
+  .hero-inner { max-width: 1100px; width: 100%; }
+  .jayant-hero-title { gap: 8px; margin-bottom: 22px !important; }
+  .jayant-hero-title .hello { font-size: clamp(20px, 2vw, 28px); }
+  .jayant-hero-title strong { font-size: clamp(38px, 5vw, 66px); letter-spacing: -.035em; line-height: 1.13; }
+  .jayant-hero-title .hero-type { font-size: clamp(28px, 4.3vw, 62px); font-weight: 400; line-height: 1.2; }
+  .hero-copy { font-size: clamp(17px, 1.35vw, 21px) !important; line-height: 1.8; max-width: 900px !important; }
+}
+@media (max-width: 800px) {
+  .jayant-hero-title strong { font-size: clamp(32px, 8vw, 48px); letter-spacing: -.03em; }
+  .jayant-hero-title .hero-type { font-size: clamp(24px, 6vw, 36px); font-weight: 400; }
+}
