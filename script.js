@@ -64,3 +64,23 @@ document.querySelectorAll('.experience-flip').forEach(card=>{
  });
  card.addEventListener('keydown',e=>{if(e.key==='Escape'){card.setAttribute('aria-pressed','false');card.blur();}});
 });
+
+// Rotating development philosophy quotes (pauses for reduced-motion preferences).
+(() => {
+ const section=document.querySelector('.philosophy-rotator');
+ const quote=document.getElementById('philosophy-text');
+ const byline=document.getElementById('philosophy-attribution');
+ if(!section||!quote||!byline||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+ const sayings=[
+ ['“Great software is built by turning complex problems into simple, reliable experiences.”','— My development philosophy'],
+ ['“The best way to predict the future is to invent it.”','— Alan Kay'],
+ ['“Simplicity is the ultimate sophistication.”','— A principle I build by'],
+ ['“First, solve the problem. Then, write the code.”','— John Johnson'],
+ ['“Technology is most powerful when it helps people do more.”','— My engineering mindset']
+ ];
+ let index=0;
+ setInterval(()=>{
+  section.classList.add('is-changing');
+  setTimeout(()=>{index=(index+1)%sayings.length;quote.textContent=sayings[index][0];byline.textContent=sayings[index][1];section.classList.remove('is-changing')},480);
+ },6000);
+})();
