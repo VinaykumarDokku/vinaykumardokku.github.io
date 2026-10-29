@@ -236,3 +236,8 @@ footer .social a.social-circle{width:66px;height:66px;min-height:66px;padding:0;
 @media(max-width:900px){.experience-flip-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}}
 @media(max-width:640px){.experience-flip-grid{grid-template-columns:1fr;max-width:430px}.experience-flip{height:370px}.flip-back ul{font-size:13.5px}footer .social{grid-template-columns:repeat(2,60px);gap:26px 30px!important}footer .social a.social-circle{width:60px;height:60px;min-height:60px}}
 @media(hover:none){.flip-hint{font-weight:600;color:#c47a00}}
+
+/* Reference-inspired tech symbols: retain the existing site layout */
+.symbol-skills{line-height:2.05!important;font-size:1.04rem;}
+.hero .eyebrow{letter-spacing:.05em;}
+@media(max-width:700px){.hero .eyebrow{font-size:.9rem;line-height:1.7}.symbol-skills{font-size:.94rem;}}
