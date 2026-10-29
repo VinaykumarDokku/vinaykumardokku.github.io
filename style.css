@@ -241,3 +241,20 @@ footer .social a.social-circle{width:66px;height:66px;min-height:66px;padding:0;
 .symbol-skills{line-height:2.05!important;font-size:1.04rem;}
 .hero .eyebrow{letter-spacing:.05em;}
 @media(max-width:700px){.hero .eyebrow{font-size:.9rem;line-height:1.7}.symbol-skills{font-size:.94rem;}}
+
+/* Reference-inspired About / Education typography and spacing */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;800;900&display=swap');
+#about,#about button,#about h2,#about h3,#about p{font-family:Roboto,Arial,Helvetica,sans-serif}
+#about .section-heading{margin-bottom:56px;min-height:225px}
+#about .heading-icon{font-size:42px;filter:grayscale(1);line-height:1.1}
+#about .heading-rule{width:3px;height:58px;margin:18px auto 0}
+#about .ghost{font-size:clamp(65px,9vw,140px);font-weight:300;letter-spacing:-4px;line-height:1.12}
+#about .section-heading h2{font-size:clamp(30px,3vw,46px);font-weight:800;margin:-83px 0 0;color:#23272c}
+#about .section-heading p{font-size:clamp(18px,1.7vw,25px);font-weight:400;margin:44px 0 0;color:#595d61}
+#about .tabs{max-width:calc(100% - 36px);margin:0 auto 56px;background:#f8f9fa;box-shadow:0 12px 28px #0002}
+#about .tabs button{font-size:clamp(16px,1.6vw,23px);font-weight:700;padding:24px 12px}
+#study .ref-edu-content h3{font-weight:800;letter-spacing:-.35px;font-size:clamp(20px,1.9vw,27px)}
+#study .ref-edu-content .ref-school{font-weight:400;font-size:clamp(17px,1.65vw,23px)}
+#study .ref-edu-content .ref-year{font-size:clamp(16px,1.5vw,21px);font-weight:300}
+#study .timeline-cap{filter:grayscale(1)}
+@media(max-width:650px){#about .ghost{font-size:clamp(54px,12vw,78px)}#about .section-heading h2{margin:-48px 0 0}#about .section-heading p{margin:22px 0 0}#about .tabs button{padding:18px 4px;font-size:15px}}
