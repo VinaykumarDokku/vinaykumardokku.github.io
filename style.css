@@ -258,3 +258,71 @@ footer .social a.social-circle{width:66px;height:66px;min-height:66px;padding:0;
 #study .ref-edu-content .ref-year{font-size:clamp(16px,1.5vw,21px);font-weight:300}
 #study .timeline-cap{filter:grayscale(1)}
 @media(max-width:650px){#about .ghost{font-size:clamp(54px,12vw,78px)}#about .section-heading h2{margin:-48px 0 0}#about .section-heading p{margin:22px 0 0}#about .tabs button{padding:18px 4px;font-size:15px}}
+
+
+/* Jayant-inspired visual refresh — original implementation for Vinay's portfolio. */
+:root{--orange:#ff9800;--ink:#252a34;--gunmetal:#242a35}
+html{scroll-behavior:smooth}
+body{font-family:Roboto,Arial,sans-serif;letter-spacing:.005em}
+.nav{background:#242a35ee;backdrop-filter:blur(16px);box-shadow:0 5px 30px #0b101b20;border-bottom:1px solid #ffffff14}
+.nav .brand{font-weight:900;letter-spacing:.085em;color:#fff}
+.nav nav a{font-weight:700;letter-spacing:.025em;transition:color .2s ease}
+.nav nav a:hover,.nav nav a.active{color:#ffa116}
+.hero.dark{background:linear-gradient(120deg,#161b25eb,#252d3ddd),radial-gradient(circle at 82% 24%,#536071,#192330 65%);min-height:850px}
+.hero:after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(145deg,transparent 20%,#ff980009 50%,transparent 75%);z-index:1}
+.hero-inner{max-width:1120px;padding-left:20px;padding-right:20px}
+.hero-overline{color:#e5e8ef;font-size:clamp(12px,1.4vw,17px);font-weight:600;letter-spacing:.22em;margin:8px 0 25px}
+.hero-overline span{color:#ff9a00;margin:0 .4em}
+.jayant-hero-title{display:flex;flex-direction:column;align-items:center;gap:12px;line-height:1.13;margin:0 auto 30px!important;min-height:0!important}
+.jayant-hero-title .hello{font-size:clamp(23px,3vw,38px);font-weight:400;color:#d7dce4;letter-spacing:.01em}
+.jayant-hero-title strong{font-size:clamp(40px,7vw,90px);font-weight:900;letter-spacing:-.055em;color:#fff;text-shadow:0 12px 34px #0007}
+.jayant-hero-title .hero-type{font-size:clamp(22px,3.3vw,43px);font-weight:600;color:#ffa21a;min-height:1.35em}
+.hero-copy{max-width:960px!important;font-size:clamp(17px,1.8vw,23px)!important;line-height:1.9!important;color:#eef0f6!important}
+.hero .resume{background:#ff9800;color:#19202c;border:2px solid #ff9800;font-weight:800;border-radius:4px;box-shadow:0 10px 32px #ff98003b;transition:transform .25s,background .25s}
+.hero .resume:hover{transform:translateY(-4px);background:#ffb03b}
+.hero-orbit{position:absolute;top:6%;right:6%;width:190px;height:190px;border:1px solid #ff990040;border-radius:50%;animation:vinayOrbit 25s linear infinite;pointer-events:none}
+.hero-orbit:before{content:'';position:absolute;inset:27px;border:1px dashed #ff99005a;border-radius:50%}
+.hero-orbit span{position:absolute;width:9px;height:9px;border-radius:50%;background:#ff9b08;box-shadow:0 0 20px #ff9800}
+.hero-orbit span:nth-child(1){top:0;left:50%}.hero-orbit span:nth-child(2){bottom:18%;right:4%}.hero-orbit span:nth-child(3){bottom:18%;left:4%}
+@keyframes vinayOrbit{to{transform:rotate(360deg)}}
+.section-heading .ghost{color:#20242c15;font-weight:900;letter-spacing:-.055em}
+.section-heading h2{font-weight:900;letter-spacing:-.045em;color:#232831}
+.section-heading .heading-rule{background:#ff9800}
+.tabs{border-radius:60px!important;box-shadow:0 12px 34px #151b2920!important;background:#f7f8fa!important}
+.tabs button{font-weight:800!important;letter-spacing:.05em}
+.tabs button.selected{border-color:#ff9800!important;background:#fff!important}
+#bio h3{font-size:clamp(23px,3vw,36px);font-weight:900}
+#bio p{line-height:1.95}
+.portfolio-new{background:#f3f4f6}
+.portfolio-card{border-radius:8px!important;box-shadow:0 15px 35px #151d2b20!important}
+.portfolio-overlay{background:#ff9800ee!important}
+.portfolio-overlay .overlay-kicker,.portfolio-overlay .overlay-more{color:#242a35!important}
+.portfolio-overlay p{color:#fff!important}
+.portfolio-card:hover{transform:translateY(-9px) scale(1.01)}
+#experience{background:linear-gradient(145deg,#e9eaed,#f9fafb)}
+#experience .section-heading .ghost{color:#242a3510}
+#experience .experience-grid{gap:26px}
+#experience .experience-card{box-shadow:0 13px 28px #151d2b18;transition:transform .3s,box-shadow .3s}
+#experience .experience-card:hover{transform:translateY(-5px);box-shadow:0 22px 40px #151d2b2b}
+.ref-edu-entry h3{font-weight:850;letter-spacing:-.03em}
+.ref-school{color:#ff8e00!important}
+#contact{background-color:#242a35}
+footer .social-circle{box-shadow:0 12px 25px #1b2b4530;transition:transform .25s,box-shadow .25s}
+footer .social-circle:hover{transform:translateY(-5px);box-shadow:0 16px 32px #ff980030}
+@media(max-width:700px){.hero.dark{min-height:750px}.hero-orbit{width:90px;height:90px;right:2%;top:12%;opacity:.5}.hero-overline{letter-spacing:.08em}.jayant-hero-title strong{font-size:clamp(35px,10vw,55px)}.jayant-hero-title .hero-type{font-size:clamp(20px,6vw,30px)}.hero-copy{font-size:16px!important}.portfolio-card:hover{transform:none}}
+@media(prefers-reduced-motion:reduce){.hero-orbit{animation:none}}
+
+
+/* Home-page typography adjustment only: closer to the supplied reference */
+@media (min-width: 801px) {
+  .hero-inner { max-width: 1100px; width: 100%; }
+  .jayant-hero-title { gap: 8px; margin-bottom: 22px !important; }
+  .jayant-hero-title .hello { font-size: clamp(20px, 2vw, 28px); }
+  .jayant-hero-title strong { font-size: clamp(38px, 5vw, 66px); letter-spacing: -.035em; line-height: 1.13; }
+  .jayant-hero-title .hero-type { font-size: clamp(28px, 4.3vw, 62px); font-weight: 400; line-height: 1.2; }
+  .hero-copy { font-size: clamp(17px, 1.35vw, 21px) !important; line-height: 1.8; max-width: 900px !important; }
+}
+@media (max-width: 800px) {
+  .jayant-hero-title strong { font-size: clamp(32px, 8vw, 48px); letter-spacing: -.03em; }
+  .jayant-hero-title .hero-type { font-size: clamp(24px, 6vw, 36px); font-weight: 400; }
+}
