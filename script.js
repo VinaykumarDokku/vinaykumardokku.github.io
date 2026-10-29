@@ -31,14 +31,26 @@ function particles(canvas){const ctx=canvas.getContext('2d');let w,h,pts=[];cons
   dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
 })();
 
-// Accessible experience-card detail dialogs
+// Click a company to expand its full project experience beneath the cards.
 for (const trigger of document.querySelectorAll('[data-experience-open]')) {
   trigger.addEventListener('click', () => {
-    const dialog = document.getElementById(trigger.dataset.experienceOpen);
-    if (dialog && typeof dialog.showModal === 'function') dialog.showModal();
+    const target = document.getElementById(trigger.dataset.experienceOpen);
+    if (!target) return;
+    const opening = target.hidden;
+    document.querySelectorAll('.experience-expanded').forEach(panel => panel.hidden = true);
+    document.querySelectorAll('[data-experience-open]').forEach(card => card.setAttribute('aria-expanded','false'));
+    if (opening) {
+      target.hidden = false;
+      trigger.setAttribute('aria-expanded','true');
+      target.scrollIntoView({behavior:'smooth',block:'nearest'});
+    }
   });
 }
-for (const dialog of document.querySelectorAll('.experience-dialog')) {
-  dialog.querySelector('[data-experience-close]')?.addEventListener('click', () => dialog.close());
-  dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
+for (const close of document.querySelectorAll('[data-close-experience]')) {
+  close.addEventListener('click', () => {
+    const target = document.getElementById('exp-details-' + close.dataset.closeExperience);
+    if (target) target.hidden = true;
+    const trigger = document.querySelector('[data-experience-open="exp-details-' + close.dataset.closeExperience + '"]');
+    if (trigger) { trigger.setAttribute('aria-expanded','false'); trigger.focus(); }
+  });
 }

@@ -181,3 +181,23 @@ footer .social a{background:#fff;color:#242934;box-shadow:0 8px 24px #18293d2c}
 @media(max-width:850px){.experience-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.experience-card-grid{grid-template-columns:1fr}.experience-card{height:265px}.exp-card-overlay{opacity:1;background:linear-gradient(#18223355,#182233df)}.exp-card-caption{display:none}}
 @media(hover:none){.exp-card-overlay{opacity:1;background:linear-gradient(#18223355,#182233df)}.exp-card-caption{display:none}}
+
+/* Experience details expand inline rather than appearing in a popup. */
+.experience-expanded[hidden]{display:none!important}
+.experience-expanded{max-width:1160px;margin:28px auto 0;border:1px solid #e7e9ef;border-top:5px solid #f90;border-radius:16px;background:#fff;box-shadow:0 18px 50px #1b2b4120;animation:fade .28s ease}
+.experience-expanded-inner{padding:clamp(22px,4vw,48px)}
+.exp-detail-kicker{font-size:12px;font-weight:800;letter-spacing:2px;color:#d67a00;margin:0 0 8px}
+.experience-expanded h3{font-size:clamp(25px,3vw,34px);margin:0 0 4px}
+.exp-detail-meta{color:#667080;margin:0 0 25px}
+.exp-project-details{border-top:1px solid #e5e8ee;padding-top:20px;margin-top:20px}
+.exp-project-details h4{font-size:20px;color:#222d40;margin:0 0 12px}
+.exp-project-details li{color:#465164;line-height:1.75;margin:8px 0}
+.exp-detail-tech{padding:16px 20px;background:#f6f7fa;border-radius:9px;color:#364258;font-weight:600}
+.exp-inline-close{border:0;border-radius:24px;background:#242934;color:white;padding:12px 25px;cursor:pointer}
+.experience-card[aria-expanded="true"]{outline:3px solid #f90;outline-offset:4px}
+.contact-social-links{position:relative;z-index:2;display:flex;gap:20px;justify-content:center;align-items:center;flex-wrap:wrap;margin:54px auto 0}
+.contact-social-links a{display:flex;align-items:center;gap:10px;padding:12px 18px;border:1px solid #ffffff5c;border-radius:50px;color:#fff;background:#ffffff0d;transition:.2s}
+.contact-social-links a:hover{border-color:#f90;color:#f90;transform:translateY(-3px)}
+footer .social a{display:flex;gap:8px;width:auto;height:auto;min-height:52px;padding:12px 17px;border-radius:30px;font-size:14px}
+footer .social a:hover{color:#e48a00}
+@media(max-width:650px){.contact-social-links{gap:10px}.contact-social-links a{padding:10px 13px;font-size:13px}.experience-expanded-inner{padding:20px}}
