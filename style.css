@@ -210,3 +210,218 @@ footer .social a.social-circle svg{width:27px;height:27px;flex:none}
 footer .social .social-label{position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%);font-size:12px;font-weight:600;white-space:nowrap;opacity:.7}
 footer>p{font-size:15px}
 @media(max-width:520px){footer .social{gap:19px;padding:54px 12px 64px}footer .social a.social-circle{width:56px;height:56px;min-height:56px}}
+
+/* White-to-orange experience cards: content flips INSIDE the same card. */
+#experience.experience-interactive{background:linear-gradient(180deg,#303338 0%,#44474a 100%);color:#fff}
+#experience .section-heading h2{color:#fff}
+#experience .section-heading p{color:#d4d4d4}
+#experience .section-heading .ghost{color:#ffffff12}
+.experience-flip-grid{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px}
+.experience-flip{appearance:none;position:relative;display:block;width:100%;height:390px;background:#fff;border:1px solid #eee;border-radius:6px;color:#252b35;text-align:center;font:inherit;cursor:pointer;overflow:hidden;transition:border-color .22s,box-shadow .22s}
+.experience-flip:hover,.experience-flip:focus-visible,.experience-flip[aria-pressed="true"]{border-color:#ff9900;box-shadow:0 12px 32px #0002;outline-offset:3px}
+.flip-front,.flip-back{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px 25px;transition:opacity .23s,transform .25s}
+.flip-front{opacity:1;transform:scale(1)}
+.flip-company{font-size:25px;font-weight:800;margin-bottom:24px}
+.flip-role,.flip-dates{font-size:19px;line-height:1.8;color:#62676d}
+.flip-hint{position:absolute;bottom:20px;font-size:12px;color:#8b8f95}
+.flip-back{background:#ff9900;color:#fff;opacity:0;transform:scale(.97);pointer-events:none;justify-content:center;text-align:left;padding:24px 27px}
+.flip-project{display:block;font-size:18px;line-height:1.3;text-align:center;margin-bottom:12px}
+.flip-back ul{margin:0;padding-left:19px;font-size:14px;line-height:1.55;max-height:295px;overflow:auto}
+.flip-back li{margin:0 0 7px}
+.experience-flip:hover .flip-front,.experience-flip:focus-visible .flip-front,.experience-flip[aria-pressed="true"] .flip-front{opacity:0;transform:scale(1.03)}
+.experience-flip:hover .flip-back,.experience-flip:focus-visible .flip-back,.experience-flip[aria-pressed="true"] .flip-back{opacity:1;transform:scale(1);pointer-events:auto}
+/* Four icons only, exactly 2 by 2, centered on white below Contact. */
+footer .social{display:grid!important;grid-template-columns:repeat(2,66px);gap:32px 36px!important;justify-content:center!important;justify-items:center;align-items:center;padding:75px 20px 80px!important;background:#fff}
+footer .social a.social-circle{width:66px;height:66px;min-height:66px;padding:0;border-radius:50%;color:#111;background:#fff;box-shadow:0 8px 24px #18293d2c}
+@media(max-width:900px){.experience-flip-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}}
+@media(max-width:640px){.experience-flip-grid{grid-template-columns:1fr;max-width:430px}.experience-flip{height:370px}.flip-back ul{font-size:13.5px}footer .social{grid-template-columns:repeat(2,60px);gap:26px 30px!important}footer .social a.social-circle{width:60px;height:60px;min-height:60px}}
+@media(hover:none){.flip-hint{font-weight:600;color:#c47a00}}
+
+/* Reference-inspired tech symbols: retain the existing site layout */
+.symbol-skills{line-height:2.05!important;font-size:1.04rem;}
+.hero .eyebrow{letter-spacing:.05em;}
+@media(max-width:700px){.hero .eyebrow{font-size:.9rem;line-height:1.7}.symbol-skills{font-size:.94rem;}}
+
+/* Reference-inspired About / Education typography and spacing */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;800;900&display=swap');
+#about,#about button,#about h2,#about h3,#about p{font-family:Roboto,Arial,Helvetica,sans-serif}
+#about .section-heading{margin-bottom:56px;min-height:225px}
+#about .heading-icon{font-size:42px;filter:grayscale(1);line-height:1.1}
+#about .heading-rule{width:3px;height:58px;margin:18px auto 0}
+#about .ghost{font-size:clamp(65px,9vw,140px);font-weight:300;letter-spacing:-4px;line-height:1.12}
+#about .section-heading h2{font-size:clamp(30px,3vw,46px);font-weight:800;margin:-83px 0 0;color:#23272c}
+#about .section-heading p{font-size:clamp(18px,1.7vw,25px);font-weight:400;margin:44px 0 0;color:#595d61}
+#about .tabs{max-width:calc(100% - 36px);margin:0 auto 56px;background:#f8f9fa;box-shadow:0 12px 28px #0002}
+#about .tabs button{font-size:clamp(16px,1.6vw,23px);font-weight:700;padding:24px 12px}
+#study .ref-edu-content h3{font-weight:800;letter-spacing:-.35px;font-size:clamp(20px,1.9vw,27px)}
+#study .ref-edu-content .ref-school{font-weight:400;font-size:clamp(17px,1.65vw,23px)}
+#study .ref-edu-content .ref-year{font-size:clamp(16px,1.5vw,21px);font-weight:300}
+#study .timeline-cap{filter:grayscale(1)}
+@media(max-width:650px){#about .ghost{font-size:clamp(54px,12vw,78px)}#about .section-heading h2{margin:-48px 0 0}#about .section-heading p{margin:22px 0 0}#about .tabs button{padding:18px 4px;font-size:15px}}
+
+
+/* Jayant-inspired visual refresh — original implementation for Vinay's portfolio. */
+:root{--orange:#ff9800;--ink:#252a34;--gunmetal:#242a35}
+html{scroll-behavior:smooth}
+body{font-family:Roboto,Arial,sans-serif;letter-spacing:.005em}
+.nav{background:#242a35ee;backdrop-filter:blur(16px);box-shadow:0 5px 30px #0b101b20;border-bottom:1px solid #ffffff14}
+.nav .brand{font-weight:900;letter-spacing:.085em;color:#fff}
+.nav nav a{font-weight:700;letter-spacing:.025em;transition:color .2s ease}
+.nav nav a:hover,.nav nav a.active{color:#ffa116}
+.hero.dark{background:linear-gradient(120deg,#161b25eb,#252d3ddd),radial-gradient(circle at 82% 24%,#536071,#192330 65%);min-height:850px}
+.hero:after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(145deg,transparent 20%,#ff980009 50%,transparent 75%);z-index:1}
+.hero-inner{max-width:1120px;padding-left:20px;padding-right:20px}
+.hero-overline{color:#e5e8ef;font-size:clamp(12px,1.4vw,17px);font-weight:600;letter-spacing:.22em;margin:8px 0 25px}
+.hero-overline span{color:#ff9a00;margin:0 .4em}
+.jayant-hero-title{display:flex;flex-direction:column;align-items:center;gap:12px;line-height:1.13;margin:0 auto 30px!important;min-height:0!important}
+.jayant-hero-title .hello{font-size:clamp(23px,3vw,38px);font-weight:400;color:#d7dce4;letter-spacing:.01em}
+.jayant-hero-title strong{font-size:clamp(40px,7vw,90px);font-weight:900;letter-spacing:-.055em;color:#fff;text-shadow:0 12px 34px #0007}
+.jayant-hero-title .hero-type{font-size:clamp(22px,3.3vw,43px);font-weight:600;color:#ffa21a;min-height:1.35em}
+.hero-copy{max-width:960px!important;font-size:clamp(17px,1.8vw,23px)!important;line-height:1.9!important;color:#eef0f6!important}
+.hero .resume{background:#ff9800;color:#19202c;border:2px solid #ff9800;font-weight:800;border-radius:4px;box-shadow:0 10px 32px #ff98003b;transition:transform .25s,background .25s}
+.hero .resume:hover{transform:translateY(-4px);background:#ffb03b}
+.hero-orbit{position:absolute;top:6%;right:6%;width:190px;height:190px;border:1px solid #ff990040;border-radius:50%;animation:vinayOrbit 25s linear infinite;pointer-events:none}
+.hero-orbit:before{content:'';position:absolute;inset:27px;border:1px dashed #ff99005a;border-radius:50%}
+.hero-orbit span{position:absolute;width:9px;height:9px;border-radius:50%;background:#ff9b08;box-shadow:0 0 20px #ff9800}
+.hero-orbit span:nth-child(1){top:0;left:50%}.hero-orbit span:nth-child(2){bottom:18%;right:4%}.hero-orbit span:nth-child(3){bottom:18%;left:4%}
+@keyframes vinayOrbit{to{transform:rotate(360deg)}}
+.section-heading .ghost{color:#20242c15;font-weight:900;letter-spacing:-.055em}
+.section-heading h2{font-weight:900;letter-spacing:-.045em;color:#232831}
+.section-heading .heading-rule{background:#ff9800}
+.tabs{border-radius:60px!important;box-shadow:0 12px 34px #151b2920!important;background:#f7f8fa!important}
+.tabs button{font-weight:800!important;letter-spacing:.05em}
+.tabs button.selected{border-color:#ff9800!important;background:#fff!important}
+#bio h3{font-size:clamp(23px,3vw,36px);font-weight:900}
+#bio p{line-height:1.95}
+.portfolio-new{background:#f3f4f6}
+.portfolio-card{border-radius:8px!important;box-shadow:0 15px 35px #151d2b20!important}
+.portfolio-overlay{background:#ff9800ee!important}
+.portfolio-overlay .overlay-kicker,.portfolio-overlay .overlay-more{color:#242a35!important}
+.portfolio-overlay p{color:#fff!important}
+.portfolio-card:hover{transform:translateY(-9px) scale(1.01)}
+#experience{background:linear-gradient(145deg,#e9eaed,#f9fafb)}
+#experience .section-heading .ghost{color:#242a3510}
+#experience .experience-grid{gap:26px}
+#experience .experience-card{box-shadow:0 13px 28px #151d2b18;transition:transform .3s,box-shadow .3s}
+#experience .experience-card:hover{transform:translateY(-5px);box-shadow:0 22px 40px #151d2b2b}
+.ref-edu-entry h3{font-weight:850;letter-spacing:-.03em}
+.ref-school{color:#ff8e00!important}
+#contact{background-color:#242a35}
+footer .social-circle{box-shadow:0 12px 25px #1b2b4530;transition:transform .25s,box-shadow .25s}
+footer .social-circle:hover{transform:translateY(-5px);box-shadow:0 16px 32px #ff980030}
+@media(max-width:700px){.hero.dark{min-height:750px}.hero-orbit{width:90px;height:90px;right:2%;top:12%;opacity:.5}.hero-overline{letter-spacing:.08em}.jayant-hero-title strong{font-size:clamp(35px,10vw,55px)}.jayant-hero-title .hero-type{font-size:clamp(20px,6vw,30px)}.hero-copy{font-size:16px!important}.portfolio-card:hover{transform:none}}
+@media(prefers-reduced-motion:reduce){.hero-orbit{animation:none}}
+
+
+/* Home-page typography adjustment only: closer to the supplied reference */
+@media (min-width: 801px) {
+  .hero-inner { max-width: 1100px; width: 100%; }
+  .jayant-hero-title { gap: 8px; margin-bottom: 22px !important; }
+  .jayant-hero-title .hello { font-size: clamp(20px, 2vw, 28px); }
+  .jayant-hero-title strong { font-size: clamp(38px, 5vw, 66px); letter-spacing: -.035em; line-height: 1.13; }
+  .jayant-hero-title .hero-type { font-size: clamp(28px, 4.3vw, 62px); font-weight: 400; line-height: 1.2; }
+  .hero-copy { font-size: clamp(17px, 1.35vw, 21px) !important; line-height: 1.8; max-width: 900px !important; }
+}
+@media (max-width: 800px) {
+  .jayant-hero-title strong { font-size: clamp(32px, 8vw, 48px); letter-spacing: -.03em; }
+  .jayant-hero-title .hero-type { font-size: clamp(24px, 6vw, 36px); font-weight: 400; }
+}
+
+/* FINAL HOMEPAGE FONT CORRECTION - only front page */
+@media(min-width:769px){
+.hero .jayant-hero-title{gap:7px!important;margin-bottom:18px!important}
+.hero .jayant-hero-title .hello{font-size:clamp(18px,1.6vw,25px)!important}
+.hero .jayant-hero-title strong{font-size:clamp(35px,4vw,58px)!important;letter-spacing:-.035em!important;line-height:1.12!important}
+.hero .jayant-hero-title .hero-type{font-size:clamp(24px,3.2vw,46px)!important;line-height:1.2!important}
+.hero .hero-copy{font-size:clamp(16px,1.15vw,19px)!important;line-height:1.65!important;max-width:850px!important;margin-left:auto!important;margin-right:auto!important}
+.hero .hero-overline{font-size:14px!important}
+}
+@media(max-width:768px){
+.hero .jayant-hero-title strong{font-size:clamp(31px,7vw,45px)!important;line-height:1.12!important}
+.hero .jayant-hero-title .hero-type{font-size:clamp(20px,5vw,28px)!important}
+.hero .jayant-hero-title .hello{font-size:18px!important}
+.hero .hero-copy{font-size:15px!important;line-height:1.65!important}
+}
+
+/* Reference-inspired homepage: intentionally isolated to #home. */
+.nav{background:#242934ed;box-shadow:none}
+.reference-home{height:100svh;min-height:710px;max-height:none;background:linear-gradient(rgba(25,29,39,.78),rgba(25,29,39,.84)),url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=2000&q=85") center center/cover no-repeat!important}
+.reference-home::before{display:none!important}
+.reference-home .particles{opacity:.88;z-index:1}
+.reference-home .reference-hero-inner{position:relative;z-index:2;width:min(1160px,92%);max-width:1160px!important;padding:120px 20px 60px!important;text-align:center}
+.reference-home .reference-role{font-size:clamp(18px,1.7vw,24px);font-weight:400;color:#c5c5c7;margin:0 0 24px}
+.reference-home .reference-title{font-family:Arial,Helvetica,sans-serif;font-size:clamp(43px,5.3vw,80px)!important;line-height:1.13!important;font-weight:300!important;letter-spacing:-.045em!important;min-height:1.3em!important;max-width:none;margin:0 auto 20px!important;white-space:normal;color:white}
+.reference-home .reference-title .cursor{font-weight:300}
+.reference-home .reference-description{max-width:900px;margin:0 auto 60px;font-size:clamp(17px,1.55vw,22px);line-height:1.85;color:#fff;font-weight:400}
+.reference-home .reference-resume{background:#37373eab!important;border:1px solid #ffffff25!important;color:white!important;border-radius:48px!important;padding:17px 54px!important;min-width:310px;box-shadow:0 0 0 6px #ffffff08,0 5px 35px #0004!important;font-size:17px;letter-spacing:.07em;font-weight:700}
+.reference-home .reference-resume:hover{background:#ff9900!important;color:#242934!important}
+.reference-home .down{color:#ff9900}
+@media(max-width:700px){.reference-home{min-height:690px;height:auto}.reference-home .reference-hero-inner{padding:125px 12px 80px!important}.reference-home .reference-role{margin-bottom:18px}.reference-home .reference-title{font-size:clamp(33px,8vw,55px)!important;min-height:2.3em!important}.reference-home .reference-description{font-size:16px;line-height:1.7;margin-bottom:36px}.reference-home .reference-resume{min-width:0;width:min(100%,310px);padding:15px 25px!important;font-size:14px}}
+
+/* Homepage only: reference-style photographic hero and overlaid navigation. */
+body:has(#home.reference-home) .nav{background:rgba(24,27,35,.25)!important;box-shadow:none!important;transition:background .25s}
+body:has(#home.reference-home) .nav:hover{background:rgba(24,27,35,.80)!important}
+#home.reference-home{height:100svh;min-height:780px;background:linear-gradient(rgba(19,22,30,.55),rgba(19,22,30,.66)),url("hero-background.jpg") center/cover no-repeat!important}
+#home.reference-home .reference-hero-inner{width:min(1250px,96%)!important;max-width:1250px!important;padding:115px 20px 40px!important}
+#home.reference-home .reference-role{font-size:clamp(19px,1.65vw,25px)!important;margin:0 0 16px!important;color:#c6c6c6}
+#home.reference-home .reference-title{font-size:clamp(42px,5.15vw,82px)!important;font-weight:300!important;letter-spacing:-.045em!important;line-height:1.22!important;min-height:1.4em!important;margin:0 auto 12px!important;max-width:1250px!important}
+#home.reference-home .reference-description{font-size:clamp(17px,1.35vw,22px)!important;line-height:1.77!important;max-width:890px!important;margin:0 auto 58px!important;color:#fff!important}
+#home.reference-home .reference-resume{padding:16px 58px!important;min-width:350px!important;font-size:16px!important;border-radius:50px!important;background:rgba(51,52,60,.88)!important}
+#home.reference-home .particles{opacity:1!important}
+@media(max-width:700px){#home.reference-home{min-height:700px;height:auto}#home.reference-home .reference-hero-inner{padding:135px 15px 75px!important}#home.reference-home .reference-title{font-size:clamp(35px,8vw,54px)!important;min-height:2.3em!important}#home.reference-home .reference-description{font-size:16px!important;line-height:1.65!important;margin-bottom:34px!important}#home.reference-home .reference-resume{min-width:0!important;width:min(100%,320px)!important;padding:15px 22px!important}}
+
+/* Unified photographic, network-lined section design */
+#portfolio.portfolio-new, #experience.experience-interactive, #contact.contact, .philosophy-rotator {
+ position:relative!important; isolation:isolate; overflow:hidden;
+ background:linear-gradient(90deg,rgba(18,22,31,.80),rgba(20,24,34,.78)),url("hero-background.jpg") center center/cover no-repeat!important;
+ color:#f9fafb!important;
+}
+#portfolio.portfolio-new::before, #experience.experience-interactive::before, #contact.contact::before {
+ content:"";position:absolute;inset:0;background:rgba(22,26,35,.16);z-index:0;pointer-events:none;
+}
+#portfolio.portfolio-new > :not(canvas), #experience.experience-interactive > :not(canvas), #contact.contact > :not(canvas) {position:relative;z-index:2}
+#portfolio.portfolio-new > canvas.particles, #experience.experience-interactive > canvas.particles, #contact.contact > canvas.particles {position:absolute!important;inset:0;width:100%;height:100%;z-index:1;pointer-events:none;opacity:.88}
+#portfolio .section-heading h2,#experience .section-heading h2,#contact .section-heading h2{color:#fff!important}
+#portfolio .section-heading p,#experience .section-heading p,#contact .section-heading p{color:#cbd0d8!important}
+#portfolio .section-heading .ghost,#experience .section-heading .ghost,#contact .section-heading .ghost{color:rgba(255,255,255,.10)!important}
+#portfolio .portfolio-grid,#portfolio .projects,#experience .experience-grid{position:relative;z-index:3}
+.philosophy-rotator{min-height:480px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:105px 24px!important}
+.philosophy-rotator p{font-size:clamp(29px,4.5vw,55px);font-weight:800;line-height:1.32;max-width:960px;transition:opacity .45s ease;opacity:1;text-shadow:0 3px 25px rgba(0,0,0,.45)}
+.philosophy-rotator span{color:#f6f7f9!important;font-size:clamp(18px,2.4vw,29px);font-style:italic;font-weight:700;margin-top:24px;transition:opacity .45s ease}
+.philosophy-rotator.is-changing p,.philosophy-rotator.is-changing span{opacity:0}
+@media(max-width:700px){.philosophy-rotator{min-height:360px;padding:75px 18px!important}#portfolio.portfolio-new,#experience.experience-interactive,#contact.contact{background-position:center!important}}
+
+/* Reference-inspired page rhythm and layouts: clean white About, Experience, Education; photographic Home and Contact. */
+#home.reference-home{background:linear-gradient(rgba(15,18,25,.46),rgba(15,18,25,.58)),url("hero-background.jpg") center/cover no-repeat!important}
+#home.reference-home .reference-hero-inner{padding-top:100px!important}
+#about{padding-top:48px!important;padding-bottom:55px!important;background:#fff!important}
+#about .section-heading{margin-bottom:26px!important;padding-top:0!important}
+#about .section-heading .heading-icon{margin-bottom:6px!important}
+#about .tabs{margin-top:12px!important;margin-bottom:22px!important}
+#about #bio{padding-top:4px!important}
+#about #bio .portrait{width:175px!important;height:175px!important;margin:12px auto 20px!important}
+#about #bio h3{font-size:clamp(22px,2.6vw,35px)!important;line-height:1.45!important;margin:16px auto!important;max-width:1320px!important;text-align:center}
+#about #bio p{font-size:clamp(17px,1.6vw,23px)!important;line-height:1.7!important;max-width:1380px!important;text-align:center;margin:20px auto!important;color:#555!important}
+#portfolio.portfolio-new{background:#fff!important;color:#242934!important}
+#portfolio.portfolio-new::before{display:none!important}
+#portfolio.portfolio-new .particles{display:none!important}
+#portfolio.portfolio-new .section-heading h2{color:#242934!important}
+#portfolio.portfolio-new .section-heading p{color:#666!important}
+#portfolio.portfolio-new .section-heading .ghost{color:#d4d4d4!important}
+#portfolio .portfolio-cards{gap:22px!important}
+#portfolio .portfolio-card{border-radius:7px!important;box-shadow:0 6px 18px rgba(10,15,25,.12)!important;overflow:hidden!important}
+#portfolio .portfolio-overlay{background:rgba(35,40,51,.96)!important;color:white!important}
+#experience.experience-interactive{background:#fff!important;color:#242934!important}
+#experience.experience-interactive::before{display:none!important}
+#experience.experience-interactive .particles{display:none!important}
+#experience .section-heading h2{color:#242934!important}
+#experience .section-heading p{color:#666!important}
+#experience .section-heading .ghost{color:#d4d4d4!important}
+#experience .experience-flip{border:1.5px solid #ff9800!important;border-radius:6px!important;box-shadow:0 8px 22px rgba(0,0,0,.05)!important}
+#education{background:#fff!important}
+#education .sreeja-edu-card{background:#fff!important;color:#242934!important;border:1.5px solid #ff9800!important;border-radius:7px!important;min-height:300px!important;box-shadow:0 8px 22px rgba(0,0,0,.06)!important}
+#education .sreeja-edu-card h3{color:#242934!important}
+#education .sreeja-edu-card .edu-year{color:#777!important}
+#education .sreeja-edu-card img{height:115px!important}
+#contact.contact{background:linear-gradient(rgba(21,26,35,.85),rgba(21,26,35,.89)),url("hero-background.jpg") center/cover no-repeat!important}
+@media(max-width:720px){#about{padding-top:38px!important}#about #bio .portrait{width:140px!important;height:140px!important}#portfolio .portfolio-cards{gap:14px!important}}
