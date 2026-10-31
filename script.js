@@ -1,4 +1,4 @@
-const phrases=['🐍 Python Developer','💻 Full Stack Developer','🤖 Machine Learning Enthusiast','☁️ Cloud Engineer','⚛️ React Developer'];const typed=document.getElementById('typing');let pi=0;if(typed){typed.textContent=phrases[0];setInterval(()=>{pi=(pi+1)%phrases.length;typed.classList.remove('title-enter');void typed.offsetWidth;typed.textContent=phrases[pi];typed.classList.add('title-enter')},3200)}
+const phrases=['VINAY KUMAR DOKKU','Software Developer','Full Stack Developer','Python & Cloud Engineer','AI Enthusiast'];let pi=0,ci=0,removing=false;const typed=document.getElementById('typing');function type(){const s=phrases[pi];ci+=removing?-1:1;typed.textContent=s.slice(0,ci);let delay=removing?45:95;if(!removing&&ci===s.length){delay=1800;removing=true}else if(removing&&ci===0){removing=false;pi=(pi+1)%phrases.length;delay=350}setTimeout(type,delay)}type();
 const menu=document.querySelector('.menu'),nav=document.querySelector('.nav nav');menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',open)});document.querySelectorAll('.nav nav a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
 document.querySelectorAll('[data-tab]').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('[data-tab]').forEach(b=>{b.classList.remove('selected');b.setAttribute('aria-selected','false')});document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));btn.classList.add('selected');btn.setAttribute('aria-selected','true');document.getElementById(btn.dataset.tab).classList.add('active')}));
 const sections=[...document.querySelectorAll('main section[id]')],links=[...document.querySelectorAll('.nav nav a')];const spy=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.toggle('active',l.getAttribute('href')==='#'+e.target.id))}})},{rootMargin:'-25% 0px -55% 0px'});sections.forEach(s=>spy.observe(s));
@@ -54,33 +54,3 @@ for (const close of document.querySelectorAll('[data-close-experience]')) {
     if (trigger) { trigger.setAttribute('aria-expanded','false'); trigger.focus(); }
   });
 }
-
-// Click/tap flips a company card in place; hover also previews its back.
-document.querySelectorAll('.experience-flip').forEach(card=>{
- card.addEventListener('click',()=>{
-  const wasOpen=card.getAttribute('aria-pressed')==='true';
-  document.querySelectorAll('.experience-flip').forEach(other=>other.setAttribute('aria-pressed','false'));
-  card.setAttribute('aria-pressed',String(!wasOpen));
- });
- card.addEventListener('keydown',e=>{if(e.key==='Escape'){card.setAttribute('aria-pressed','false');card.blur();}});
-});
-
-// Rotating development philosophy quotes (pauses for reduced-motion preferences).
-(() => {
- const section=document.querySelector('.philosophy-rotator');
- const quote=document.getElementById('philosophy-text');
- const byline=document.getElementById('philosophy-attribution');
- if(!section||!quote||!byline||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
- const sayings=[
- ['“Great software is built by turning complex problems into simple, reliable experiences.”','— My development philosophy'],
- ['“The best way to predict the future is to invent it.”','— Alan Kay'],
- ['“Simplicity is the ultimate sophistication.”','— A principle I build by'],
- ['“First, solve the problem. Then, write the code.”','— John Johnson'],
- ['“Technology is most powerful when it helps people do more.”','— My engineering mindset']
- ];
- let index=0;
- setInterval(()=>{
-  section.classList.add('is-changing');
-  setTimeout(()=>{index=(index+1)%sayings.length;quote.textContent=sayings[index][0];byline.textContent=sayings[index][1];section.classList.remove('is-changing')},480);
- },6000);
-})();
