@@ -425,3 +425,6 @@ body:has(#home.reference-home) .nav:hover{background:rgba(24,27,35,.80)!importan
 #education .sreeja-edu-card img{height:115px!important}
 #contact.contact{background:linear-gradient(rgba(21,26,35,.85),rgba(21,26,35,.89)),url("hero-background.jpg") center/cover no-repeat!important}
 @media(max-width:720px){#about{padding-top:38px!important}#about #bio .portrait{width:140px!important;height:140px!important}#portfolio .portfolio-cards{gap:14px!important}}
+
+/* Updated project gallery */
+.portfolio-new .portfolio-thumbnail{object-fit:cover;object-position:center;transition:transform .35s ease}.portfolio-new .portfolio-card:hover .portfolio-thumbnail{transform:scale(1.045)}.portfolio-new .portfolio-card:focus-visible{outline:3px solid #7cc8ff;outline-offset:3px}.portfolio-new .portfolio-overlay .overlay-kicker{font-size:clamp(9px,.75vw,12px);letter-spacing:.06em}
